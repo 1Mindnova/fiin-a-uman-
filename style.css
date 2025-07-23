@@ -1,0 +1,42 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#container {
+  text-align: center;
+  padding: 20px;
+}
+
+#verseDisplay {
+  font-size: 2.2vw;
+  padding: 0 10px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+#playBtn {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
