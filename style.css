@@ -1,30 +1,60 @@
+/* style.css */
 body {
   margin: 0;
   padding: 0;
-  background-color: #000;
-  color: #fff;
-  font-family: 'Georgia', serif;
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 audio {
-  margin-top: 2rem;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
-#verse-display {
-  margin: 4rem 2rem;
-  font-size: 1.5rem;
+#verseContainer {
+  font-size: 3vw;
   text-align: center;
-  max-width: 900px;
+  max-width: 90%;
+  padding: 1em;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  animation: slideIn 1s forwards;
+  white-space: pre-wrap;
 }
 
-#verse-display.show {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  #verseContainer {
+    font-size: 6vw;
+  }
 }
