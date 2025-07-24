@@ -1,1 +1,0 @@
-Diese ZIP enthält alle Dateien für deine Webseite. Füge zusätzlich 'audio.mp3' hinzu.
