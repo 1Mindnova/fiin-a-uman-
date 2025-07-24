@@ -1,0 +1,61 @@
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px;
+  text-align: left;
+}
+
+#verseDisplay {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.show {
+  opacity: 1;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.hide {
+  opacity: 0;
+  animation: fadeOut 1.3s ease-out forwards;
+}
+
+#playBtn {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 14px 28px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  0%   { opacity: 1; transform: scale(1); filter: blur(0); }
+  100% { opacity: 0; transform: scale(0.8); filter: blur(6px); }
+}
