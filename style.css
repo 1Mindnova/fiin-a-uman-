@@ -1,0 +1,58 @@
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#container {
+  text-align: center;
+  padding: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+#verseDisplay {
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  line-height: 1.6;
+  padding: 0 20px;
+  opacity: 0;
+}
+
+.show {
+  animation: fadeInOnly 1.2s ease-out forwards;
+}
+
+.hide {
+  animation: fadeOutStar 1.4s ease-out forwards;
+}
+
+#playBtn {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 14px 28px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes fadeInOnly {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOutStar {
+  0%   { opacity: 1; transform: scale(1); filter: blur(0); }
+  100% { opacity: 0; transform: scale(0.7); filter: blur(6px); }
+}
