@@ -1,1 +1,0 @@
-Bitte die Datei 'Der Mensch 76.mp3' als 'audio.mp3' in dasselbe Verzeichnis legen.
