@@ -1,1 +1,0 @@
-Lade deine 'audio.mp3' in dasselbe Verzeichnis hoch. Öffne index.html oder deploye via GitHub Pages.
